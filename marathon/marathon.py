@@ -15,7 +15,14 @@ with open("marathon.csv", 'r', encoding= 'utf8') as file, open('marathon-build-M
                 val = val.strip("'")
                 values.append(f"'{val}'")
 
-        columns = ", ".join(header)
+        new_header = []
+        for name in header:
+            if name == "Group":
+                new_header.append('`Group`')
+            else:
+                new_header.append(name)
+
+        columns = ", ".join(new_header)
         values_str = ", ".join(values)
 
         sql = f"INSERT INTO {table_name} ({columns}) VALUES ({values_str});\n"
