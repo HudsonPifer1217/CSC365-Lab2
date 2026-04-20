@@ -12,13 +12,15 @@ with open("marathon.csv", 'r', encoding= 'utf8') as file, open('marathon-build-M
             if val == "":
                 values.append('NULL')
             else:
-                val = val.strip("'")
+                val = val.strip(" ").strip("'")
                 values.append(f"'{val}'")
 
         new_header = []
         for name in header:
             if name == "Group":
                 new_header.append('`Group`')
+            elif name == "Lasname":
+                new_header.append('Lastname')
             else:
                 new_header.append(name)
 
