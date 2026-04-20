@@ -17,10 +17,11 @@ with open("marathon.csv", 'r', encoding= 'utf8') as file, open('marathon-build-M
 
         new_header = []
         for name in header:
+            name = name.strip(" ")
             if name == "Group":
                 new_header.append('`Group`')
-            elif name == "Lasname":
-                new_header.append('Lastname')
+            elif name == "LasName":
+                new_header.append('LastName')
             else:
                 new_header.append(name)
 
