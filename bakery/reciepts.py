@@ -14,7 +14,7 @@ with open("receipts.csv", 'r', encoding= 'utf8') as file, open(f'receipts-build-
                 values.append('NULL')
             elif 'Oct' in val:
                 val = val.replace('Oct', '10')
-                values.append(f"STR_TO_DATE('{val}', '%d-%m-%y')")
+                values.append(f"STR_TO_DATE('{val}', '%d-%m-%Y')")
             else:
                 values.append(f"'{val}'")
 
