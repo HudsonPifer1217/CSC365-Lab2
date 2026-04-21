@@ -1,7 +1,7 @@
 import csv
 table_name = 'MARATHON'
 
-with open("marathon.csv", 'r', encoding= 'utf8') as file, open('marathon-build-MARATHON.sql', 'w', encoding='utf8') as outfile:
+with open("marathon.csv", 'r', encoding= 'utf8') as file, open(f'marathon-build-{table_name}.sql', 'w', encoding='utf8') as outfile:
     reader = csv.reader(file)
     header = next(reader)
 

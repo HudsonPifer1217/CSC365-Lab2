@@ -1,7 +1,7 @@
 import csv
 table_name = 'RESERVATIONS'
 
-with open("Reservations.csv", 'r', encoding= 'utf8') as file, open('Reservations-build-RESERVATIONS.sql', 'w', encoding='utf8') as outfile:
+with open("Reservations.csv", 'r', encoding= 'utf8') as file, open(f'Reservations-build-{table_name}.sql', 'w', encoding='utf8') as outfile:
     reader = csv.reader(file)
     header = next(reader)
 
