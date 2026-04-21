@@ -19,7 +19,6 @@ with open("Reservations.csv", 'r', encoding= 'utf8') as file, open('Reservations
                     values.append(f"'{val}'")
                     break
             else:
-                val = val.strip(" ").strip("'")
                 values.append(f"'{val}'")
 
         columns = ", ".join(header)
