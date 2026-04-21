@@ -16,7 +16,7 @@ with open("Reservations.csv", 'r', encoding= 'utf8') as file, open(f'Reservation
             for month in month_num:
                 if month in val:
                     val = val.replace(month,month_num[month])
-                    values.append(f"STR_TO_DATE('{val}', '%d-%b-%y')")
+                    values.append(f"STR_TO_DATE('{val}', '%d-%m-%y')")
                     break
             else:
                 values.append(f"'{val}'")
