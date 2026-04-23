@@ -1,7 +1,7 @@
 import csv
 table_name = 'ITEMS'
 
-with open("items.csv", 'r', encoding= 'utf8') as file, open(f'items-build-{table_name}.sql', 'w', encoding='utf8') as outfile:
+with open("items.csv", 'r', encoding= 'utf8') as file, open(f'bakery-build-{table_name}.sql', 'w', encoding='utf8') as outfile:
     reader = csv.reader(file)
     header = next(reader)
 
